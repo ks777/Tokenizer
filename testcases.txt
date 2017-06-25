@@ -1,0 +1,51 @@
+Normal Case:
+command input: "\n" "programming\nassignment"
+Output:	programming
+	assignment
+
+command input: "k" "coolcoolcoolcool"
+output:	coolcoolcoolcool
+
+command input: "k" "kkkkkkkkkk"
+output:		
+
+Multiple Delimiters:
+Command input: "\e\v\t" "hell\vo ever\tybody"
+Output:	h
+	ll
+	o
+	r
+	ybody
+
+Empty Input String:
+Command input: "" "I guess we are printing out the hex of \t now"
+Output:	[0x09]
+
+Command input: "\n" ""
+Output:	
+
+Backslash followed by unspecified:
+Command input: "\k" "welcome\ktocomputerscience"
+Output:	welcome
+	tocomputerscience
+
+Command input: "k" "welcome\ktocomputerscienceagain"
+Output:	welcome
+	tocomputerscienceagain
+
+Blackslash at the end of a string:
+Command input: "\\" "\\\\\\\\\\\why\\\\\\\\ohwhy\\\\"
+Output:	why
+	ohwhy
+
+Escape Sequence appear in the output:
+Command input: "" "\\\f"
+Output:	[0x5c][0x0c]
+
+Too Many:
+Command input: "" "" "" "" "Too much"
+Output: Error: Too Many Agruments.
+
+Too Few:
+Command Input: "Too Few"
+Output: Error: Too Few Arguments.
